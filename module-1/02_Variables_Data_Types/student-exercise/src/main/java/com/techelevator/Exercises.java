@@ -1,13 +1,19 @@
 package com.techelevator;
 
 public class Exercises {
-
+	
 	public static void main(String[] args) {
 
         /*
         1. 4 birds are sitting on a branch. 1 flies away. How many birds are left on
         the branch?
         */
+		 /* Brain notes: this exercise is about variable names and data types. 
+		dont have to print lines. 
+		assure no errors/build errors
+		submit thru git path " git add -A / git commit -m "comment" / git push origin main / -- check bit bucket to assure its submitted
+		 */
+		// Challenge problems - just try them (if you get it wrong it wont hurt score)
 
 		// ### EXAMPLE:
 		int initialNumberOfBirds = 4;
@@ -28,6 +34,10 @@ public class Exercises {
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
+		
+		int numberOfRaccoonsInWoods = 3;
+		int numberOfRaccoonsDinner = 2;
+		int numberOfRaccoonsLeftInWoods = numberOfRaccoonsInWoods - numberOfRaccoonsDinner;
 
         /*
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
@@ -183,6 +193,11 @@ public class Exercises {
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
+		
+		double danWallet = 3.00;
+		double danCandy = 1.00;
+		double danChange = danWallet - danCandy;
+		System.out.println(danChange);
 
         /*
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
@@ -243,6 +258,12 @@ public class Exercises {
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+		
+		int numberOfLemonCupcakes = 53;
+		int numberOfHomeCupcakes = 2;
+		int numOfLemonCupcakesPerBox = 3;
+		int numOfBoxesWithThreeLemonCupcakes = (numberOfLemonCupcakes - numberOfHomeCupcakes) / numOfLemonCupcakesPerBox ;
+		System.out.println(numOfBoxesWithThreeLemonCupcakes);
 
         /*
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
@@ -297,8 +318,14 @@ public class Exercises {
         last and first names should be separated by a comma followed by a space, and the middle initial must end
         with a period.
         Example: "Hopper, Grace B."
+     
         */
-
+		String firstName = "Ley";
+		String lastName = "Abdurehman";
+		String middleInitial = "T";
+		
+		String fullName = lastName + ", " + firstName + " " + middleInitial + ".";
+		System.out.println(fullName);
         /*
         The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
         What percentage of the trip has been completed?
