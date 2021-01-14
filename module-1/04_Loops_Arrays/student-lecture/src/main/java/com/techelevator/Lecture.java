@@ -1,5 +1,8 @@
 package com.techelevator;
 
+// MOD 1 - LEC 4
+
+
 public class Lecture {
 
     /*
@@ -7,7 +10,7 @@ public class Lecture {
     */
     public int[] returnArray() {
         int[] array = { 80, 8080, 443 };
-        return null;
+        return array;
     }
 
     /*
@@ -15,7 +18,7 @@ public class Lecture {
     */
     public int returnFirstElement() {
         int[] portNumbers = { 80, 8080, 443 };
-        return 1;
+        return por;
     }
 
     /*
@@ -48,11 +51,15 @@ public class Lecture {
 
         { // A new block with scoped variables
 
-            int result = number * 5;
+            int result;
+            { 
+            result = number * 5;
+         
+            }
+         // the result variable disappears here
 
-        } // the result variable disappears here
-
-        return number; // We want to return result here. How?
+        	return result;
+        }// We want to return result here. How?
     }
 
     /*
