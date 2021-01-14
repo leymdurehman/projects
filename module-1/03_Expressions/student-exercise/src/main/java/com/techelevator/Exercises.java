@@ -1,5 +1,9 @@
 package com.techelevator;
-
+/*	WRITE CODE HERE
+// DONT CHANGE METHOD SIGNATURES -- WILL CAUSE ERRORS
+// BE WEARY OF ECLIPSE HINTS -
+ *  CAN BREAK TESTS*/
+ 
 public class Exercises {
 
 	/*
