@@ -1,5 +1,5 @@
 package com.techelevator;
-/*	WRITE CODE HERE
+/*	mod 1.3 exercises
 // DONT CHANGE METHOD SIGNATURES -- WILL CAUSE ERRORS
 // BE WEARY OF ECLIPSE HINTS -
  *  CAN BREAK TESTS*/
@@ -26,8 +26,17 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+		if ( (aSmile&&bSmile) || (!aSmile&&!bSmile)) {
+			return true;
+		} else {
+		
 		return false;
 	}
+	}
+		//IF A SMILES AND B SMILES IN TROUBLE
+	//IF A NOT SMILES AND B NOT SMILES IN TROUBLE
+	//IF A SMILES AND B NOT SMILES NOT IN TROUBLE
+	//IF A NOT SMILES AND B SMILES NOT IN TROUBLE
 
 	/*
 	 3. Given two int values, return their sum. Unless the two values are the same, then return double their sum.
@@ -35,9 +44,15 @@ public class Exercises {
 	 sumDouble(3, 2) → 5
 	 sumDouble(2, 2) → 8
 	 */
+	
 	public int sumDouble(int a, int b) {
-		return 0;
+		if (a != b) {
+			return (a+b);
+		} else { 
+			return (2*(a+b));
+		}	
 	}
+	
 
 	/*
 	 4. Given an int n, return the absolute difference between n and 21, except return double the absolute
@@ -49,7 +64,10 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return 0;
+		if (n > 21) {
+			return (2*(n-21));
+		} else
+			return (21-n);
 	}
 
 	/*
@@ -61,7 +79,12 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+		if (talking && (hour < 7 || hour > 20)) {
+			return true;
+		} else {
+		
+			return false;
+		}
 	}
 
 	/*
@@ -71,7 +94,11 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
+		if (( a==10 || b == 10) || (a+b==10)) {
+			return true;
+		}  else {
 		return false;
+		}
 	}
 
 	/*
@@ -82,6 +109,16 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
+			if ((negative==true) && (a < 0 && b < 0)) {
+				return true;
+			} 
+			if ((negative==false) && a < 0 && b > 0) {
+				return true;
+			}
+			if ((negative==false) && a > 0 && b < 0) {
+				return true;
+				
+			} else 
 		return false;
 	}
 
@@ -93,6 +130,9 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		if ((n > 0) && ((n % 3==0)||(n % 5==0))) {
+			return true;
+		}
 		return false;
 	}
 
@@ -103,7 +143,11 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
-		return false;
+		if( (temp1 <0) && (temp2>100) || ((temp2 <0) && (temp1>100))) {
+		return true; 
+		} else {
+			return false;
+		}
 	}
 
 	/*
@@ -113,7 +157,15 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+	
+		if ( ((a >= 10) && (a <= 20)) || ((b >= 10) && (b <= 20))) {
+		
+			return true;
+			
+		} else {
+		
 		return false;
+		}
 	}
 
 	/*
@@ -124,7 +176,11 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		if (((a >= 13) && (a <= 19)) || ((b >= 13) && (b <= 19)) || ((c >= 13) && (c <= 19))) {
+			return true;
+		} else {
 		return false;
+		}
 	}
 
 	/*
@@ -135,9 +191,12 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
-		return false;
+		if (((a >= 13) && (a <= 19)) ^ ((b >= 13) && (b <= 19))) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-
 	/*
 	 13. Given three int values, a b c, return the largest.
 	 intMax(1, 2, 3) → 3
