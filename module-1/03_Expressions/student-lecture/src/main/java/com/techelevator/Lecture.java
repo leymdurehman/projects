@@ -69,7 +69,7 @@ public class Lecture {
     */
     public boolean returnTrueWhenGreaterThanFive(int number) {
         if (number > 5) {
-
+        	return true;
         } else {
 
         }
@@ -108,21 +108,28 @@ public class Lecture {
     11. Write an if statement that returns "Fizz" if the parameter is 3 and returns an empty String for anything else.
     */
     public String returnFizzIfThree(int number) {
-        return "";
+    	if (number == 3) {
+        return "Fizz";
+    	}
+    	return "";
     }
-
     /*
     12. Now write the above using the Ternary operator ?:. If you're not sure what this is, you can Google it.
     */
     public String returnFizzIfThreeUsingTernary(int number) {
-        return "";
+    	return (number == 3) ? "Fizz" : "";
+     
     }
 
     /*
     13. Write an if/else statement that returns "Fizz" if the parameter is 3, "Buzz" if the parameter is 5 and an empty String for anything else.
     */
     public String returnFizzOrBuzzOrNothing(int number) {
-        return "";
+    	if (number == 3) {
+    		return "Fizz";
+    	} else {	
+        return "Buzz";
+    	}
     }
 
     /*

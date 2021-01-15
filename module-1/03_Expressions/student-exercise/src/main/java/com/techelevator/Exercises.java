@@ -14,6 +14,9 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
+		if ((!weekday) || vacation) {
+			return true;
+		} else
 		return false;
 	}
 
@@ -204,7 +207,16 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
-		return 0;
+		
+		
+		if ((a>b) && (a>c)) {
+			return a;}
+		else if ((b>a) && b>c) {
+			return b; }
+		else  {
+			return c;
+		}
+		
 	}
 
 	/*
@@ -215,9 +227,12 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		if  (((a >= 30) && (a <= 40)) && ((b >= 30) && (b <= 40)) || ((a >= 40) && (a <= 50)) && ((b >= 40) && (b <= 50))) {
+			return true;
+		} else {
 		return false;
+		}
 	}
-
 	/*
 	 15. Given 2 int values, return the larger value that is in the range 10..20 inclusive,
 	 or return 0 if neither is in that range.
@@ -226,9 +241,22 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		return 0;
-	}
+		if (!((a >= 10) && (a <= 20)) && !((b >= 10) && (b <= 20))) {
+			return 0; 
+		}
+		else if (((b >= 10) && (b <= 20))&&!((a >= 10) && (a <= 20))) {
+				return b; }
+		else if (((a >= 10) && (a <= 20))&&!((b >= 10) && (b <= 20))) {
+				return a; }
+		else {
+			if (a>b)
+			{return a;}
+			else {return b;}
+			
+		}
+	}	
 
+		
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
 	 when the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case
@@ -239,6 +267,12 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		if (isWeekend && cigars >= 40) {
+			return true; }
+		if (!isWeekend && (cigars >=40 && cigars <=60 )) {
+			return true;
+		
+		} else
 		return false;
 	}
 
@@ -254,7 +288,14 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		return 0;
+		if ( you <= 2 || date <= 2) {
+			return 0; }
+		if ( ((you >= 8) || ((date >= 8)))) {
+				return 2; }
+	
+		
+		
+		return 1;
 	}
 
 	/*
@@ -266,8 +307,14 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
-		return false;
+		if( !isSummer && (temp >= 60) && (temp <= 90)) {
+			return true;
+		}	if(isSummer && (temp >= 60) && (temp <= 100)) {
+			return true;
+		} else {
+			return false; }
 	}
+	
 
     /*
      19. Dessert Island Diner believes a meal isn't a meal without dessert. All meals come with
@@ -290,7 +337,9 @@ public class Exercises {
      yourCakeAndEatItToo(11.00, false) → "special"
      */
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-        return "";
+    	
+    	return "";
+        
     }
 
 	/*
@@ -301,7 +350,12 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		int sumAB = a + b;
+		if (sumAB >=10 && sumAB<= 19) {
+			return 20;
+		}else {
+			return sumAB;
+		}
 	}
 
 	/*
@@ -461,7 +515,19 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		int sumABC = a + b + c;
+		if (a==b && b==c && c==a) {
+			return 0;
+		}
+		if (a==b) {
+			return c; }
+		if (a==c) {
+			return b; }
+		if (b==c) {
+			return a; }
+		
+		
+		return sumABC;
 	}
 
 	/*
@@ -475,7 +541,20 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		int sumABC = a + b + c;
+		if ((a==13) && (!(b==13) && (!(c==13)))) {
+			return c;
+		} else if ((b==13) && (!(a==13))) {
+			return a;
+		} else if (c==13) {
+			return (a+b);
+		}
+		
+		return sumABC;
+/* if a == 13, then a and b both arent in sumABC
+ * if b == 13, then b and c both arent in sumABC
+ * if c == 13, then c is not in sumABC*/ 
+			
 	}
 
 }
