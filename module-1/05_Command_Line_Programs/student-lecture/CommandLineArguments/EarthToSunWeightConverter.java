@@ -8,31 +8,115 @@ public class EarthToSunWeightConverter {
 	 * This allows the user to give our program commands or feed it data from the terminal
 	 * command line when they run it.
 	 */
-	public static void main(String[] args) {
-		
-		int sunGravity = 28;
-		
-		/*
-		 * How could we display all the arguments passed into the args array?
-		 */
-        for (int i = 0 ; i < args.length ; i++) {
-            System.out.println("Argument " + i + " : " + args[i]);
-        }
+//	public static void main(String[] args) {
+//		
+//		int sunGravity = 28;
+//		
+//		/*
+//		 * How could we display all the arguments passed into the args array?
+//		 */
+//        for (int i = 0 ; i < args.length ; i++) {
+//            System.out.println("Argument " + i + " : " + args[i]);
+//        }
+//
+//		
+//		/*
+//		 * How could we use those arguments in our calculator program?
+//		 */
+//        System.out.printf("%-15s   %-15s", "Earth (lbs)", "Sun (lbs)");
+//        System.out.println("\n---------------------------------------");
+//        for (int i = 0 ; i < args.length ; i++) {
+//            int earthWeight = Integer.parseInt(args[i]);
+//            int sunWeight = earthWeight * sunGravity;
+//            System.out.printf("%-15s   %-15s", earthWeight, sunWeight);
+//            System.out.println();
+//        }
+//
+//
+//	}
+//
+//}
 
-		
-		/*
-		 * How could we use those arguments in our calculator program?
-		 */
-        System.out.printf("%-15s   %-15s", "Earth (lbs)", "Sun (lbs)");
-        System.out.println("\n---------------------------------------");
-        for (int i = 0 ; i < args.length ; i++) {
-            int earthWeight = Integer.parseInt(args[i]);
-            int sunWeight = earthWeight * sunGravity;
-            System.out.printf("%-15s   %-15s", earthWeight, sunWeight);
-            System.out.println();
-        }
 
 
-	}
+public static void main(String[] args) {
+	
+	int sunGravity = 28;
+	
+	/*
+	 * How could we display all the arguments passed into the args array?
+	 */
+    for (int i = 0 ; i < args.length ; i++) {
+        System.out.println("Argument " + i + " : " + args[i]);
+    }
+
+	
+	/*
+	 * How could we use those arguments in our calculator program?
+	 */
+    System.out.printf("%-15s   %-15s", "Earth (lbs)", "Sun (lbs)");
+    System.out.println("\n---------------------------------------");
+    for (int i = 0 ; i < args.length ; i++) {
+        int earthWeight = Integer.parseInt(args[i]);
+        int sunWeight = earthWeight * sunGravity;
+        System.out.printf("%-15s   %-15s", earthWeight, sunWeight);
+        System.out.println();
+    }
+
 
 }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

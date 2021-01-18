@@ -174,13 +174,13 @@ public class Exercises {
 		
 		//for ( int i = 0 ; i > nums.length ; i++) {
 		
-	if (nums.length >= 2) {
+	if (nums.length > 2) {
 				
 			int sum2 = nums[0] + nums[1];
 			
 			return sum2;
 			
-		} else if (nums.length < 2 && nums.length > 0 ) {
+		} else if (nums.length < 2 ) {
 			
 			int sumOne = nums[0];
 					
@@ -199,14 +199,7 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		
-		int[] middleNum = new int[2];
-		middleNum[0] = a[1];
-		middleNum[1] = b[1];
-		
-		return middleNum;
-				
-		
+		return new int[] {};
 	}
 
 	/*
@@ -217,29 +210,12 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		
-		
-	//	int sumEvens[] = new int[i];
-		
-		int evenTotals =  0;
-		
-		for ( int i = 0 ; i < nums.length ; i++) {
-			
-			if ( nums[i]% 2 == 0) {
-			
-				evenTotals = evenTotals + 1;
-			
-			}
-			
-			
-		}
-
-		return evenTotals;
-		
+		return 0;
 	}
 
 	/*
-	 12. Return the sum oso it does not count and numbers that come immediately after a 13 also do 
+	 12. Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 
+	 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do 
 	 not count.
 	 sum13([1, 2, 2, 1]) → 6
 	 sum13([1, 1]) → 2
@@ -248,26 +224,7 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13, 3, 4]) → 10
 	 */
 	public int sum13(int[] nums) {
-		
-		int numSum = 0;
-			
-		for (int i=0; i < nums.length; i++ ) {
-			
-			if ( nums[i] !=13) {
-				
-				numSum = numSum + nums[i];
-			
-				if (i>0 && nums[i-1] == 13 ) {
-				
-				numSum = numSum - nums[i]; 
-			}	
-			}
-			
-			
-			
-		
-		} 
-		return numSum;
+		return 0;
 	}
 
 	/*
@@ -280,11 +237,10 @@ public class Exercises {
 		boolean has2Twos = false;
 		
 		for (int i=0; i < nums.length - 1; i++ ) {
-			
 			if(nums[i] == 2 ) {
 				if(nums[i+1] == 2) {
 					has2Twos = true;
-					return true;
+	
 				}
 			}
 		}
@@ -298,23 +254,7 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
-		
-		for (int i=0; i < nums.length; i++ ) {
-			
-			if ( nums[i] == 1 || nums[i] ==3) {
-				
-			return false;
-				
-				
-			}
-			
-			
-		}
-
-		
-		
-		
-		return true;
+		return false;
 	}
 
 	/*
@@ -324,26 +264,7 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
-		
-		int twoTotals = 0;
-		
-		for (int i=0; i < nums.length; i++ ) {
-			
-			if ( nums[i] == 2) {
-				
-				twoTotals += nums[i]; 			
-				
-			}			
-			
-		}
-		 
-		if (twoTotals == 8) {
-			
-			return true;
-		} else {
-		
 		return false;
 	}
 
-	}
 }
