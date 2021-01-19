@@ -44,7 +44,20 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return null;
+		
+		String first = out.substring(0,2);
+		
+		
+		// Get the first 2 characters of out
+		
+		String last = out.substring(out.length()-2);
+		
+		//get the last 2 characers of out
+		
+		return first + word + last;
+		
+		// create new string with first2 + word + last2
+		
 	}
 
 	/*
@@ -315,7 +328,32 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		
+		String newStr = "";
+		
+		
+		for ( int i = 0; i < str.length(); i+= 4) {
+			
+			newStr += str.charAt(i);
+			
+			if (i == ((str.length())-1)) {
+				
+				newStr += str.charAt(i);
+			}
+			
+		}
+			
+			
+			
+		
+		// loop thru str
+		//skip ever 2nd val set of nums
+		//get val and val beside ti and add it to string
+		// be careful of last index
+		
+		
+		
+		return newStr;
 	}
 
 	/*
