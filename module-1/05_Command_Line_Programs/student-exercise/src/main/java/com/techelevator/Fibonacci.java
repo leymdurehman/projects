@@ -14,9 +14,7 @@ public class Fibonacci {
 		
 		
 		
-	 int fibNumMax; 
-	 int num1 = 0;
-	 int num2 = 1;
+	
 		 
 		 
 		
@@ -26,9 +24,11 @@ public class Fibonacci {
 	        
 	        System.out.println("Enter the Fibonacci Number:");
 	        
-	        fibNumMax = input.nextInt();
+	       int fibNumMax = input.nextInt();
 	        
 	        int i=1;
+	        int num1 = 0;
+	   	 	int num2 = 1;
 	 	       while(i <= fibNumMax && num1 < fibNumMax)
 	 	      {
 	 	          System.out.print(num1+" ");
@@ -40,14 +40,15 @@ public class Fibonacci {
 	 	         num2 = sumOfPrevTwo;
 	 	         
 	 	           i++;
-	 	           if ( num1 == fibNumMax) {
-	 	        	   
-	 	        	   break;
+	 	           
+//	 	           if ( num1 == fibNumMax) {
+//	 	        	   
+//	 	        	   break;
 	 	        	  
-	 	           }
-	 	       }
+	 	      }
 	 	    }
-}
+	 	}
+
 	        
 	        
 	    
