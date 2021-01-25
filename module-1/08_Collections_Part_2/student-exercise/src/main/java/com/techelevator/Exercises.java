@@ -62,26 +62,25 @@ public class Exercises {
 		
 		for ( String key: animalGroupName.keySet()) { 
 			
-			if (animalName == "" || animalName == null || !animalGroupName.containsKey((animalName.toUpperCase()))) {
-				
-				return unknown; 
-				
-			} 
+//			if (animalName == "" || animalName == null || !animalGroupName.containsKey((animalName.toUpperCase()))) {
+//				
+//				return unknown; 
+//				
+//			} 
+//			
+			if ( animalGroupName.containsKey((animalName.toUpperCase()))){
 			
-			if ( animalGroupName.containsKey((animalName.toUpperCase())));
 			
-			{
+				return animalGroupName.get(animalName.toUpperCase());	}
 				
-				return animalGroupName.get(animalName.toUpperCase());
-				
-			}
-				
-			}
-		
+				 else {
+				 return unknown;
+				 }		
+		}
 		return unknown;
-
-	}
-		
+	
+	
+	}	
 			
 	
 
@@ -358,6 +357,19 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 			Map<String, Integer> remoteWarehouse) {
+		
+		
+		Map<String, Integer> mapMerge = new HashMap<String, Integer>();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		return null;
 	}
 

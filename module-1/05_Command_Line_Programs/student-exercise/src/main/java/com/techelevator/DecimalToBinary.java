@@ -25,7 +25,7 @@ public class DecimalToBinary {
 				// Convert the decimal number to a binary number
 				
 				
-				String binary = "";	// Holds the binary value
+				//String binary = "";	// Holds the binary value
 				
 				for( int i = 0; i < decimals.length; i++) {
 					
@@ -33,6 +33,7 @@ public class DecimalToBinary {
 				}
 				
 				//12 155 6
+				String binary = "";
 				
 				for (int x= 0; x < decimalInputs.length; x++) {
 					binary = "";
@@ -41,7 +42,7 @@ public class DecimalToBinary {
 						binary = (i % 2) + binary; 
 					
 					}
-					System.out.println(decimalInputs[x] + " in binary is " + binary + ".");
+					System.out.println(decimalInputs[x] + " in binary is" + binary + ".");
 				}
 
 			}
@@ -49,4 +50,3 @@ public class DecimalToBinary {
 
 	}
 	
-

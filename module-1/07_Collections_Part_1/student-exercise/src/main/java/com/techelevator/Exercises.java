@@ -306,7 +306,7 @@ public class Exercises {
 
 
 		//	return null;
-		System.out.println(interleaved);
+	
 		return interleaved;
 	}
 }
