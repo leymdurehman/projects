@@ -9,18 +9,14 @@ public class SavingsAccount extends BankAccount {
 	}
 	
 	
-	// Methods
-	// if this.getbalance < 150, this.withdraw + 2
-	// if this.withdraw > this.balance return this.balance
-	
-	@Override
-	public int withdraw(int amountToWithdraw) {
-		
-		int serviceCharge = 2;
+
+@Override
+public int withdraw(int amountToWithdraw) {
+
 		
 		if ((this.getBalance() - amountToWithdraw) < 150 && 
 				this.getBalance() - amountToWithdraw > 0) {
-			super.withdraw(amountToWithdraw + serviceCharge);
+			super.withdraw(amountToWithdraw + 2);
 			return this.getBalance();
 		}
 		if (this.getBalance() < amountToWithdraw) {
