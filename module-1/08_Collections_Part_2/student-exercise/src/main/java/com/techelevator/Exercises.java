@@ -62,27 +62,24 @@ public class Exercises {
 		
 		for ( String key: animalGroupName.keySet()) { 
 			
-//			if (animalName == "" || animalName == null || !animalGroupName.containsKey((animalName.toUpperCase()))) {
-//				
-//				return unknown; 
-//				
-//			} 
-//			
+			if (animalName == "" || animalName == null || !animalGroupName.containsKey((animalName.toUpperCase()))) {
+				
+				return unknown; 
+				
+			} 
+		
 			if ( animalGroupName.containsKey((animalName.toUpperCase()))){
 			
 			
-				return animalGroupName.get(animalName.toUpperCase());	}
+				return animalGroupName.get(animalName.toUpperCase());	
 				
-				 else {
-				 return unknown;
-				 }		
-		}
-		return unknown;
+	}	 else return unknown;
+				
 	
-	
-	}	
+	}
+		return unknown;	
 			
-	
+	}
 
 	/*
 	 * Given an String item number (a.k.a. SKU), return the discount percentage if the item is on sale.
@@ -359,18 +356,25 @@ public class Exercises {
 			Map<String, Integer> remoteWarehouse) {
 		
 		
-		Map<String, Integer> mapMerge = new HashMap<String, Integer>();
+		Map<String, Integer> mapMerge = new HashMap<>();
 		
+		    
+		    for (String name : mainWarehouse.keySet()){
+		        if(remoteWarehouse.containsKey(name)){
+		            mapMerge.put(name, (mainWarehouse.get(name) + remoteWarehouse.get(name)));
+		        } else {
+		        	mapMerge.put(name, mainWarehouse.get(name));
+		        }
+		    }
+		    for (String name : remoteWarehouse.keySet()) {
+		    	if (!(mainWarehouse.containsKey(name))) {
+		    		mapMerge.put(name, remoteWarehouse.get(name));
+		    	}
+		    }
+		    return mapMerge;        
 		
+	
 		
-		
-		
-		
-		
-		
-		
-		
-		return null;
 	}
 
 	/*
