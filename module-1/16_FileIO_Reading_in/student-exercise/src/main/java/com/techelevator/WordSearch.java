@@ -46,7 +46,7 @@ public class WordSearch {
 						lineNumber++;
 						
 						int wordToSearchLength = wordToSearchUpperCase.substring(0).length();
-						if (nextLineOfFile.contains(wordToSearchUpperCase.substring(0)) || (nextLineOfFile.contains(wordToSearchLowerCase.substring(0)) && wordToSearchUpperCase.substring(0).length() == wordToSearchLength)) {
+						if (nextLineOfFile.contains(wordToSearchUpperCase.substring(0)) || (nextLineOfFile.contains(wordToSearchLowerCase.substring(0)))) {
 							System.out.println( lineNumber + ")"  + nextLineOfFile);
 					}
 					
