@@ -35,8 +35,8 @@ public class WordSearch {
 					
 					String wordToSearchUpperCase = wordToSearch.toUpperCase().substring(0, 1) + wordToSearch.toLowerCase().substring(1);	
 					String wordToSearchLowerCase = wordToSearch.toLowerCase();	
-					System.out.println(wordToSearchUpperCase);
-					System.out.println(wordToSearchLowerCase);
+//					System.out.println(wordToSearchUpperCase);
+//					System.out.println(wordToSearchLowerCase);
 					
 					int lineNumber = 0;
 					
@@ -45,7 +45,7 @@ public class WordSearch {
 						String nextLineOfFile = textReader.nextLine();
 						lineNumber++;
 						
-						int wordToSearchLength = wordToSearchUpperCase.substring(0).length();
+						//int wordToSearchLength = wordToSearchUpperCase.substring(0).length();
 						if (nextLineOfFile.contains(wordToSearchUpperCase.substring(0)) || (nextLineOfFile.contains(wordToSearchLowerCase.substring(0)))) {
 							System.out.println( lineNumber + ")"  + nextLineOfFile);
 					}
