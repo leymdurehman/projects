@@ -1,50 +1,52 @@
-package com.techelevator;
-
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class ColorWriterExample {
+public void createTotalSalesReport(String itemName, int itemQuantity, double totalPrice) throws IOException {
 	
-	private final static String FILE_NAME = "Colors.txt";
-	private final static int UPPER_LIMIT = 200;
+	File file = new File("TotalSales.rpt");
+	file.createNewFile();
+	try (FileWriter fileWriter = new FileWriter("TotalSales.rpt", true); BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){
+
+		bufferedWriter.write(itemName + "|"+ itemQuantity + "|" 
+									+ "$ " + totalPrice + System.getProperty("line.separator"));
+
+
+		
+}
 	
-	public static void main(String[] args) throws IOException  {
+	
+public List<String> readLinesFromTotalRPT(){
 		
-		File file = new File(FILE_NAME);
-		file.createNewFile();
+		//*** TOTAL SALES REPORT
 		
-		try (PrintWriter printWriter = new PrintWriter(file);
-				BufferedWriter bufferedWriter = new BufferedWriter(printWriter)) {
-			for (int i = 1 ; i <= UPPER_LIMIT ; i++) {
-				//printWriter.println(getOutput(i));
-				//bufferedWriter.write(getOutput(i) + "\n");  // \n is a carriage return
-				bufferedWriter.write(getOutput(i) + System.getProperty("line.separator")); 
-					/*
-					 * System.getProperty("line.separator") gets the carriage return used 
-					 * by the current Operating System.
-					 */
+		// arrayList of strings to hold lines from total sales report
+		
+		List<String> linesFromTotalSales = new ArrayList<String>();
+		
+		//scanner will read through the file and add the lines to the list
+		
+		try (Scanner fileReader = new Scanner("TotalSales.rpt")) {
+			while (fileReader.hasNextLine()) {
+				linesFromTotalSales.add(fileReader.nextLine());
 			}
+				return linesFromTotalSales;
 		}
-		
-		System.out.println("DONE!");
-	}
-	
-	
-	private static String getOutput(int i) {
-		
-		String output = String.valueOf(i);
-		
-		if (i % 5 == 0) {
-			output = "RED";
-		} else if (i % 7 == 0) {
-			output = "BLUE";
-		} else if (i % 9 == 0) {
-			output = "GREEN";
-		}
-		
-		return output;
-	}
-	
+public void assignValues() {
+			
+				List<String> linesFromTotalSales = readLinesFromTotalRPT();
+				
+				
+				for (String line : linesFromTotalSales) {
+					String [] arrOfNameQuantityPrice = line.split("\\|");
+					String name = arrOfNameQuantityPrice[0];
+					int quantity = Integer.parseInt(arrOfNameQuantityPrice[1]);
+					double price = Double.parseDouble(arrOfNameQuantityPrice[2]);		
+							
+							
+				}
 }

@@ -3,8 +3,23 @@ package com.techelevator.view;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
-
+import com.techelevator.CateringSystemCLI;
 import com.techelevator.inventory.Slot;
+
+
+/*
+
+	menu is taking asking all Qs, getting all user inputs, 
+	
+	then sending the inputs to CateringSystemCLI -
+
+
+
+
+	*/
+
+
+
 
 public class Menu {
 

@@ -33,7 +33,7 @@ public class WordSearch {
 				
 				try (Scanner textReader = new Scanner(file)) {
 					
-					String wordToSearchUpperCase = wordToSearch.toUpperCase().substring(0, 1) + wordToSearch.toLowerCase().substring(1);	
+				String wordToSearchUpperCase = wordToSearch.toUpperCase().substring(0, 1) + wordToSearch.toLowerCase().substring(1);	
 					String wordToSearchLowerCase = wordToSearch.toLowerCase();	
 //					System.out.println(wordToSearchUpperCase);
 //					System.out.println(wordToSearchLowerCase);
