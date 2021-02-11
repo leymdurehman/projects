@@ -2,16 +2,47 @@
 
 -- Let's find out who made payment 16666:
 
+SELECT *
+FROM payment
+WHERE payment_id = 16666;
+
 -- Ok, that gives us a customer_id, but not the name. We can use the customer_id to get the name FROM the customer table
 
+SELECT *
+FROM payment
+JOIN customer ON payment.customer_id = customer.customer_iD;
+WHERE payment_id = 16666;
+
+
 -- We can see that the * pulls back everything from both tables. We just want everything from payment and then the first and last name of the customer:
-
+SELECT payment.*, customer.first_name, customer.last_name
+FROM payment
+JOIN customer ON payment.customer_id = customer.customer_iD;
+WHERE payment_id = 16666;
 -- But when did they return the rental? Where would that data come from? From the rental table, so let’s join that.
-
+SELECT payment.*, customer.first_name, customer.last_name, rental.return_date
+FROM payment
+JOIN customer ON payment.customer_id = customer.customer_iD
+JOIN rental ON rental.rental_id = payment.rental_id
+WHERE payment_id = 16666;
 -- What did they rent? Film id can be gotten through inventory.
-
+SELECT payment.*, customer.first_name, customer.last_name, rental.return_date, film.title
+FROM payment
+JOIN customer ON payment.customer_id = customer.customer_iD
+JOIN rental ON rental.rental_id = payment.rental_id
+JOIN inventory ON inventory.inventory_id = rental.inventory_id
+JOIN film ON inventory.film_id = film.film_id
+WHERE payment_id = 16666;
 -- What if we wanted to know who acted in that film?
-
+SELECT payment.*, customer.first_name, customer.last_name, rental.return_date, film.title
+FROM payment
+JOIN customer ON payment.customer_id = customer.customer_iD
+JOIN rental ON rental.rental_id = payment.rental_id
+JOIN inventory ON inventory.inventory_id = rental.inventory_id
+JOIN film ON inventory.film_id = film.film_id
+JOIN film_actor ON film.film_id = film_actor.file_id
+JOIN actor ON film
+WHERE payment_id = 16666;
 -- What if we wanted a list of all the films and their categories ordered by film title
 
 -- Show all the 'Comedy' films ordered by film title
