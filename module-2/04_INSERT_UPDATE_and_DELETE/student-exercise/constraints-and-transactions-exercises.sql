@@ -81,7 +81,9 @@ DELETE FROM film WHERE title = 'Euclidean PI';
 -- 9. Delete Mathmagical from the category table.
 -- (Did it succeed? Why?)
 
-DELETE FROM category WHERE name = 'Mathemagical'; //**I spelled it Math(e)magical orginally so I had to do it here too
+DELETE FROM category WHERE name = 'Mathemagical';
+
+ ---**I spelled it Math(e)magical orginally so I had to do it here too
 
 
 -- <** NO - did not work because this category is being referenced in another table (film_category) >
@@ -90,7 +92,20 @@ DELETE FROM category WHERE name = 'Mathemagical'; //**I spelled it Math(e)magica
 -- (Did it succeed? Why?)
 -- <YOUR ANSWER HERE>
 
+DELETE FROM film_category WHERE category_id = 17;
+
+-- yes it worked because category ID was a foreign key and was only referencing the category table
+
+
 -- 11. Retry deleting Mathmagical from the category table, followed by retrying
 -- to delete "Euclidean PI".
 -- (Did either deletes succeed? Why?)
--- <YOUR ANSWER HERE>
+
+DELETE FROM category WHERE name = 'Mathemagical';
+-- yes because it was no longer being used as a reference elsewhere
+
+
+DELETE FROM film WHERE title = 'Euclidean PI';
+-- NO because this film is still being referenced in the inventory table
+
+
