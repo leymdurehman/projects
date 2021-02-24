@@ -31,7 +31,7 @@ CREATE TABLE message (
 
 The Data Object will represent 1 row from the table.
 
-In Eclipse create a new class named `Message` in the `package com.techelevator.messages`.
+In Eclipse  a new class named `Message` in the `package com.techelevator.messages`.
 
 Add private member variables for each column in the database.  The data type of each member variable should be one that can hold the same type of data as the SQL table in Java.
 
