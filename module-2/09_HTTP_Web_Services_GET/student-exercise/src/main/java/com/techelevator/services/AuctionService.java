@@ -6,6 +6,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.techelevator.models.Auction;
 
+
+
 public class AuctionService {
 
     public static final String BASE_URL = "http://localhost:3000/auctions";
@@ -14,23 +16,29 @@ public class AuctionService {
 
 
     public Auction[] listAllAuctions() {
-        // api code here
-        return null;
+    	Auction[] auctions = restTemplate.getForObject(BASE_URL, Auction[].class);
+    	return auctions;
+
     }
 
     public Auction listDetailsForAuction(int id) {
-        // api code here
-        return null;
+    	String endpointUrl = BASE_URL + "/" + id;
+    	Auction auction = restTemplate.getForObject(endpointUrl, Auction.class);
+        return auction;
     }
 
     public Auction[] findAuctionsSearchTitle(String title) {
-        // api code here
-        return null;
+    	String endpointUrl = BASE_URL + "?title_like=" + title;
+    	Auction[] auction = restTemplate.getForObject(endpointUrl, Auction[].class);
+        return auction;
+
+     
     }
 
     public Auction[] findAuctionsSearchPrice(double price) {
-        // api code here
-        return null;
+    	String endpointUrl = BASE_URL + "?currentBid_lte=" + price;
+    	Auction[] auction = restTemplate.getForObject(endpointUrl,Auction[].class);
+        return auction;
     }
 
 }
