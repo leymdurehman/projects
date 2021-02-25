@@ -1,9 +1,12 @@
 package com.techelevator.services;
 
+
+
 import com.techelevator.models.Auction;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
@@ -66,18 +69,72 @@ public class AuctionService {
     }
 
     public Auction add(String auctionString) {
-        // place code here
-        return null;
+    	Auction newAuction = makeAuction(auctionString);
+    	String url = API_URL;
+  	  HttpHeaders headers = new HttpHeaders();
+  	  headers.setContentType(MediaType.APPLICATION_JSON);
+  	 
+  	  HttpEntity<Auction> entity = new HttpEntity<Auction>( newAuction, headers);
+  	  
+  	  try {
+  		newAuction = restTemplate.postForObject(url, entity, Auction.class);
+  	  } catch (RestClientResponseException e) {
+  		  console.printError(e.getRawStatusCode() + " " + e.getStatusText());
+  		  return null;
+  	  } catch (ResourceAccessException e) {
+  		  console.printError(e.getMessage());
+  		  return null;
+  	  }
+  	  
+  	  return newAuction;
     }
 
+
     public Auction update(String auctionString) {
-        // place code here
-        return null;
+    	 Auction auctionPut = makeAuction(auctionString); // This line has nothing to do with an API
+   	  
+   	  /*
+   	   * PUT
+   	   */
+    	 String url = API_URL + "/" + auctionPut.getId();
+     	  HttpHeaders headers = new HttpHeaders();
+     	  headers.setContentType(MediaType.APPLICATION_JSON);
+     	 
+     	  HttpEntity<Auction> entity = new HttpEntity<Auction>( auctionPut, headers);
+     	  
+   	  
+   	  try {
+   		  // use the put() method
+   		  restTemplate.put(url, entity);
+   	  } catch (RestClientResponseException e) {
+   		 console.printError(e.getRawStatusCode() + " " + e.getStatusText());
+   		 return null;
+   	  } catch (ResourceAccessException e) {
+   		  console.printError(e.getMessage());
+   		  return null;
+   	  }
+   	  
+   	
+        return auctionPut;
     }
 
     public boolean delete(int id) {
-    	// place code here
-    	return false; 
+    //	 
+      	  
+      	  try {
+      		  // use the put() method
+      		  restTemplate.delete(API_URL + "/" + id);
+      	  } catch (RestClientResponseException e) {
+      		 console.printError(e.getRawStatusCode() + " " + e.getStatusText());
+      		 return false;
+      	  } catch (ResourceAccessException e) {
+      		  console.printError(e.getMessage());
+      		  return false;
+      	  }
+      	  
+      	
+       
+    	return true; 
     }
 
     private HttpEntity<Auction> makeEntity(Auction auction) {
