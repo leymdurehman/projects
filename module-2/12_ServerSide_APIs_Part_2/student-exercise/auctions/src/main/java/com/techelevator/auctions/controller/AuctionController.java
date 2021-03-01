@@ -44,7 +44,7 @@ public class AuctionController {
     }
 
     @RequestMapping( path = "", method = RequestMethod.POST)
-    public Auction create(@RequestBody Auction auction) {
+    public Auction create(@RequestBody Auction auction) throws AuctionNotFoundException {
         return dao.create(auction);
     }
 
