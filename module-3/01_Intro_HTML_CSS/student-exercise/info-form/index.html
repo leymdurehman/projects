@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Costanza Newsletter Sign-up</title>
+    <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+    <header>
+        <h1>George Costanza Newsletter</h1>
+        <p>Want 83 emails a day? ... Join our family!</p>
+    </header>
+    <nav>
+     <!----  <a href="index.html">Back to Menu</a> -->
+    </nav>
+    <main>
+        <h2>Sign-up Form</h2>
+
+        <form action="/api/index.html" method="POST">
+        <div>
+            <label for="subscriberName">Name:</label>
+            <input type="text" id="subscriberName" name="subscriberName" required/>
+        </div> 
+        <div>
+            <label for="subscriberEmail">E-mail:</label>
+            <input id="subscriberEmail" name="subscriberEmail" type="email" required />
+        </div>
+        <div>
+            <label for="subscriberSeasonEpisode">Favorite Seinfeld Episode name:</label>
+            <input id="subscriberSeasonEpisode" 
+                name="subscriberSeasonEpisode" 
+                type="text" />
+        </div>
+        <div>
+            <label for="subscriberCharacter">Favorite Character (Other than George, of course):</label>
+            <input id="subscriberCharacter" name="subscriberCharacter" type="text" />
+        </div>
+        <div>
+            <label for="dateOfBirth">Birthday:</label>
+            <input id="dateOfBirth" name="dateOfBirth" type="date" />
+        </div>
+        <div>
+            <label for="numOfEmails" required> How many <b><i>DAILY</i></b> emails?:</label>
+            <select id="numOfEmails" name="numOfEmails">
+                <option value="A">83</option>
+                <option value="B">436</option>
+                <option value="C">15,321</option>
+            </select>
+        </div>
+        <div>
+            <label for="verifyData">Check Box to  <b>CONFIRM</b>  Information</label>
+            <input id="verifyData" name="verifyData" type="checkbox" required/>
+        </div>
+        <div>
+            <input type="submit" value= "SIGN ME UP!" />
+        </div>
+    </form>
+</main>
+</body>
+</html>
