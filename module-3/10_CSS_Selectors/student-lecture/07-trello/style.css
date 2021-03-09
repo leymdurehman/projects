@@ -1,0 +1,18 @@
+html {
+
+    height:100%;
+    font-size: 16px;
+
+}
+  *  {
+    
+        box-sizing: boder-box;
+
+    }
+body{
+
+font-family: 'Raleway', sans-serif;
+
+background-image: linear-gradient(to bottom, #858c90) ;
+
+}

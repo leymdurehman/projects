@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color:teal;
+}
+
+
+
+
+h1 {
+    font-size: 40px;
+    color:palevioletred;
+    text-align: center;
+}
+
+h2 {
+    color:maroon;
+    text-align: center;
+ 
+}
+
+h3 {
+
+    
+    color:maroon;
+    font-size: 20px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    text-align: center;
+}
+
+table.center {
+   color: peru;
+    margin-left: auto;
+    margin-right: auto;
+  }
