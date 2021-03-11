@@ -7,6 +7,8 @@ html {
   font-size: 16px;
 }
 
+
+
 body {
   background-color: rgba(192, 192, 192, 0.1);
 }
@@ -14,4 +16,71 @@ body {
 ul {
   margin: 0;
   padding: 0;
+}
+
+
+aside {
+
+  width: 200px;
+  border-right: 1px solid rgba(192, 192, 192, 0.1);
+  
+
+
+}
+
+aside > img{
+
+  display: block;
+  height: 120px;
+  margin: 0 auto;
+
+}
+
+main {
+
+  display: block;
+  margin-left: 200px;
+
+}
+
+aside li{
+
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px rgba(192, 192, 192, 0.1);
+  margin: 10px auto;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 80%;
+  line-height: 2;
+
+
+}
+
+li a:hover {
+
+  font-weight: bold;
+  color: rgba(192, 192, 192, 0.1);
+  text-decoration: none;
+
+}
+
+header {
+
+  height: 120px;
+
+}
+
+header > img {
+
+height: 80%;
+
+}
+
+img.banner{
+display: block;
+width: 100%;
+
 }
