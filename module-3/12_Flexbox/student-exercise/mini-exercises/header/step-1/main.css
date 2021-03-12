@@ -4,6 +4,7 @@ body {
 }
 
 header {
+  
   background-color: #F0F0F0;
   padding: 20px;
 }
@@ -36,4 +37,11 @@ a:visited {
 a:hover {
   color: #00AFEF;
   text-decoration: underline;
+}
+
+header, ul{
+
+  display: flex;
+
+
 }
