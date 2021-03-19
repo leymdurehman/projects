@@ -37,5 +37,58 @@ function displayGroceries() {
   });
 }
 
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  
 setPageTitle();
 displayGroceries();
+const item = document.querySelector('ul');
+item.addEventListener('click', event => {
+      event.target.classList.add('completed');
+  })
+  item.addEventListener('dblclick', event => {
+    event.target.classList.remove('completed');
+})
+
+const toggleButton = document.getElementById('toggleAll');
+toggleButton.addEventListener('click', event => { if
+  (allItemsIncomplete == true){
+    markCompleted();
+    toggleButton.innerText='Mark All Incomplete';
+    allItemsIncomplete = false;
+  } else {
+    markIncomplete();
+    toggleButton.innerText ='Mark All Complete';
+    allItemsIncomplete = true;
+  } 
+
+
+})
+
+
+
+
+
+  
+});
+
+function markCompleted() {
+  const list  = document.querySelectorAll('.shopping-list ul li');
+  list.forEach((item) => {
+   
+    item.classList.add('completed');
+  });
+}
+
+function markIncomplete(){
+  const list  = document.querySelectorAll('.shopping-list ul li');
+  list.forEach((item) => {
+  
+      item.classList.remove('completed');
+    
+
+  });
+
+}
