@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../22_DOM/lecture-final"
+		},
+		{
+			"path": "../../../21_JavaScript_Functions/lecture-final"
+		},
+		{
+			"path": "../../../23_Event_Handling/student-exercise"
+		},
+		{
+			"path": "../../../23_Event_Handling/lecture-final"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "student-exercise"
+	}
+}
