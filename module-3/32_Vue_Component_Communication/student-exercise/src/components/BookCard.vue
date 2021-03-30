@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" v-bind:class="{'read': book.read}">
      <div class="book-title">
         <h2>{{ book.title }}</h2>
      </div>
@@ -9,7 +9,7 @@
      <div>
         <img v-if="book.isbn" v-bind:src="'http://covers.openlibrary.org/b/isbn/' + book.isbn + '-M.jpg'" />
      </div>   
-         <button v-bind:class="{'mark-read': book.read === true}" @click="setReadStatus(book)">
+         <button @click="setReadStatus(book)">
             {{unreadOrReadText(book)}}
          </button>
  </div>
@@ -24,7 +24,7 @@ export default {
     
   data(){
         return{
-        
+            readStatus: this.$store.state.book.read
         }
     } ,
     methods: {
@@ -40,8 +40,7 @@ export default {
         },
 
         setReadStatus(book){
-            this.$store.commit("SET_STATUS", this.book);
-    
+            this.$store.commit("SET_STATUS", book);
             
 
            
