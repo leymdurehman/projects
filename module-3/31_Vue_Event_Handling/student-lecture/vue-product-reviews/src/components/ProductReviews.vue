@@ -42,6 +42,34 @@
             </div>
         </div>
 
+        <form>
+            <div class="form-element">
+                <label for="reviewer">Name:</label>
+                <input type="text" id="reviewer" v-model.trim ="newReview.reviewer"/>
+            </div>
+             <div class="form-element">
+                <label for="title">Title:</label>
+                <input type="text" id="title" v-model ="newReview.title"/>
+            </div>
+            <div class="form-element">
+                <label for="rating">Rating:</label>
+                <select id="rating" v-model ="newReview.rating">
+                    <option value="1"> 1 Star </option>
+                    <option value="2"> 1 Star </option>
+                    <option value="3"> 1 Star </option>
+                    <option value="1"> 1 Star </option>
+                    <option value="1"> 1 Star </option>
+                </select>
+            </div>
+            <div class = "form-element">
+                <label for = "Review">Review:</label>
+                <textarea id = "review" v-model ="newReview.review"/>       
+            </div>        
+        </form>
+
+
+
+
 
         <div class="review" v-for="review in reviews" v-bind:key="review.id"
             v-bind:class="{ favorited: review.favorited }">
@@ -67,6 +95,7 @@ export default {
         return {
             name: 'Cigar Parties for Dummies',
             description: 'Host and plan the perfect cigar party for all your squirrelly friends',
+            newReview: {},
             showDescription: true,
             reviews: [
                 {
@@ -195,6 +224,29 @@ div.main div.review h4 {
 div.main div.review.favorited {
     background-color: lightyellow;
 }
+div.form-element {
+ margin-top: 10px;
+}
+div.form-element > label {
+ display: block;
+}
+div.form-element > input, div.form-element > select {
+ height: 30px;
+ width: 300px;
+}
+div.form-element > textarea {
+ height: 60px;
+ width: 300px;
+}
+form > input[type=button] {
+ width: 100px;
+}
+form > input[type=submit] {
+ width: 100px;
+ margin-right: 10px;
+}
+
+
 </style>
 
 
