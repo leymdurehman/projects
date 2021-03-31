@@ -10,7 +10,7 @@
     </div>
     <button v-if="enableAdd" v-on:click.prevent="addToReadingList(book)">Add to Reading List</button>
   </div>
-     <router-link v-bind:to="{name: 'bookDetails', params: { isbn: book.isbn }}"/>
+     </router-link>
 </template>
 
 <script>
