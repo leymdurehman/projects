@@ -4,6 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  activeBook: 0,
   state: {
     books: [
       {
@@ -103,6 +104,9 @@ export default new Vuex.Store({
     },
     SAVE_BOOK(state, book) {
       state.books.push(book);
+    }, 
+    SET_ACTIVE_BOOK(state, isbn) {
+      state.activeBook= isbn;
     }
   },
   actions: {},
