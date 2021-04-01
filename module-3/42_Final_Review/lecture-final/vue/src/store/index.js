@@ -23,7 +23,8 @@ export default new Vuex.Store({
     storeName: 'Java Blue Mart',
     products: [],
     categories: ['All', 'Home', 'Apparel', 'Jewelry', 'Garden'],
-    category: 'All'
+    category: 'All',
+    cart: []
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -47,6 +48,12 @@ export default new Vuex.Store({
     },
     SET_CATEGORY(state, category) {
       state.category = category;
+    },
+    ADD_ITEM_TO_CART(state, product) {
+      state.cart.push(product);
+    },
+    CLEAR_CART(state) {
+      state.cart = [];
     }
   }
 })
